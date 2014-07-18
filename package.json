@@ -1,6 +1,6 @@
 {
   "name": "node-ballmer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Steve Ballmer stream",
   "main": "ballmer.js",
   "scripts": {
