@@ -1,3 +1,5 @@
+// This file is a sample use case and can safely be deleted.
+
 var ballmer = require("./ballmer.js").ballmer;
 
 ballmer({
