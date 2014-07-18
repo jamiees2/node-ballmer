@@ -1,0 +1,25 @@
+{
+  "name": "node-ballmer",
+  "version": "0.0.1",
+  "description": "A Steve Ballmer stream",
+  "main": "ballmer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamiees2/node-ballmer"
+  },
+  "keywords": [
+    "node",
+    "steve",
+    "ballmer",
+    "DEVELOPERS"
+  ],
+  "author": "jamiees2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamiees2/node-ballmer/issues"
+  },
+  "homepage": "https://github.com/jamiees2/node-ballmer"
+}
