@@ -8,25 +8,43 @@ var randomizeCase = function(str) {
 	return n;
 }
 
+var generateCancer = function() {
+  return "Linux is not in the public domain. Linux is a cancer that attaches" +
+         " itself in an intellectual property sense to everything it touches.";
+}
+
 exports.ballmer = function(options) {
+  options.flavor = options.flavor || "developers";
 	options.total = options.total || -1;
 	options.newlines = options.newlines || false;
-	options.case = options.case || "uppercase";
+	options.casing = options.casing || "uppercase";
 
+  var loremContent;
 
-	var rs = Readable(), count = 0, developers = "";
-	if (options.case !== "randomcase") {
-		developers = (options.case === "lowercase" ? "developers" : "DEVELOPERS");
+  if (options.flavor == "cancer") {
+    loremContent = generateCancer();
+  } else {
+    loremContent = "developers";
+  }
+
+	var rs = Readable(), count = 0, content = loremContent;
+
+	if (options.casing !== "randomcase") {
+		content = (options.casing === "lowercase" ? loremContent : loremContent.toUpperCase());
 	}
 	rs._read = function(){
-		if (options.case === "randomcase") {
-			developers = randomizeCase("developers");
+		if (options.casing === "randomcase") {
+			content = randomizeCase(loremContent);
 		}
-		rs.push(developers + (options.newlines ? "\n" : ""));
+		rs.push(content + (options.newlines ? "\n" : ""));
 		count++;
 		if (options.total > 0 && count >= options.total) rs.push(null);
 	}
 	return rs;
 }
 // console.log(randomizeCase("DEVELOPERS"))
-exports.ballmer({total: 10, newlines: true, case: "randomcase"}).pipe(process.stdout);
+//exports.ballmertest({
+//  total: 10,
+//  newlines: true,
+//  casing: "randomcase"
+//}).pipe(process.stdout);
