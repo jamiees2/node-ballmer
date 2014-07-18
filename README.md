@@ -10,9 +10,10 @@ npm install node-ballmer
 ```
 var ballmer = require("node-ballmer").ballmer
 ballmer({
+  flavor: "cancer", // leave this out for DEVELOPERSDEVELOPERSDEVELOPERSDEVELOPERS
 	total: 10, // leave this out for an infinite stream
 	newlines: true, // leave this out for a pure string stream
-	case: "randomcase" // lower-case, UPPER-CASE and RaNdoMCaSe
+	casing: "randomcase" // lower-case, UPPER-CASE and RaNdoMCaSe
 });
 ```
 

@@ -43,8 +43,9 @@ exports.ballmer = function(options) {
 	return rs;
 }
 // console.log(randomizeCase("DEVELOPERS"))
-//exports.ballmertest({
-//  total: 10,
-//  newlines: true,
-//  casing: "randomcase"
-//}).pipe(process.stdout);
+exports.ballmer({
+  flavor: "cancer",
+  total: 10,
+  newlines: true,
+  casing: "randomcase"
+}).pipe(process.stdout);
