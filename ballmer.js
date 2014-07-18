@@ -28,5 +28,3 @@ exports.ballmer = function(options) {
 	}
 	return rs;
 }
-// console.log(randomizeCase("DEVELOPERS"))
-exports.ballmer({total: 10, newlines: true, case: "randomcase"}).pipe(process.stdout);
